@@ -1,5 +1,7 @@
 # anydoc
 
+> 注: 此项目fork自 [anydoc](https://github.com/firecrawl/anydoc)，并仿照 npx cli 的逻辑添加了 [原生cli](./src/bin/anydoc.rs) 的编译，相关说明详见 [CLI.md](CLI.md)
+
 [![Crates.io](https://img.shields.io/crates/v/anydoc.svg)](https://crates.io/crates/anydoc)
 [![npm](https://img.shields.io/npm/v/@firecrawl/anydoc.svg)](https://www.npmjs.com/package/@firecrawl/anydoc)
 [![PyPI](https://img.shields.io/pypi/v/firecrawl-anydoc.svg)](https://pypi.org/project/firecrawl-anydoc/)
