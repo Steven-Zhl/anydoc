@@ -1,16 +1,16 @@
 {
-  "name": "@firecrawl/anydoc",
-  "version": "0.2.4",
+  "name": "@steven-zhl/anydoc",
+  "version": "0.2.5",
   "description": "Convert documents (doc, docx, odt, rtf, epub, pdf, presentations, spreadsheets, csv) to GitHub-Flavored Markdown",
   "license": "MIT",
-  "homepage": "https://github.com/firecrawl/anydoc#readme",
+  "homepage": "https://github.com/Steven-Zhl/anydoc#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/firecrawl/anydoc.git",
+    "url": "git+https://github.com/Steven-Zhl/anydoc.git",
     "directory": "node"
   },
   "bugs": {
-    "url": "https://github.com/firecrawl/anydoc/issues"
+    "url": "https://github.com/Steven-Zhl/anydoc/issues"
   },
   "keywords": [
     "markdown",
@@ -40,7 +40,7 @@
   },
   "napi": {
     "binaryName": "anydoc",
-    "packageName": "@firecrawl/anydoc",
+    "packageName": "@steven-zhl/anydoc",
     "dtsHeaderFile": "dts-header.d.ts",
     "targets": [
       "x86_64-apple-darwin",

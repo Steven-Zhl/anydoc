@@ -75,10 +75,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-android-arm64')
-        const bindingPackageVersion = require('@firecrawl/anydoc-android-arm64/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-android-arm64')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-android-arm64/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -91,10 +91,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-android-arm-eabi')
-        const bindingPackageVersion = require('@firecrawl/anydoc-android-arm-eabi/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-android-arm-eabi')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-android-arm-eabi/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -112,10 +112,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-win32-x64-gnu')
-        const bindingPackageVersion = require('@firecrawl/anydoc-win32-x64-gnu/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-win32-x64-gnu')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-win32-x64-gnu/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -128,10 +128,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-win32-x64-msvc')
-        const bindingPackageVersion = require('@firecrawl/anydoc-win32-x64-msvc/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-win32-x64-msvc')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-win32-x64-msvc/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -145,10 +145,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-win32-ia32-msvc')
-        const bindingPackageVersion = require('@firecrawl/anydoc-win32-ia32-msvc/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-win32-ia32-msvc')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-win32-ia32-msvc/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -161,10 +161,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-win32-arm64-msvc')
-        const bindingPackageVersion = require('@firecrawl/anydoc-win32-arm64-msvc/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-win32-arm64-msvc')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-win32-arm64-msvc/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -180,10 +180,10 @@ function requireNative() {
       loadErrors.push(e)
     }
     try {
-      const binding = require('@firecrawl/anydoc-darwin-universal')
-      const bindingPackageVersion = require('@firecrawl/anydoc-darwin-universal/package.json').version
-      if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-        throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+      const binding = require('@steven-zhl/anydoc-darwin-universal')
+      const bindingPackageVersion = require('@steven-zhl/anydoc-darwin-universal/package.json').version
+      if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+        throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
       }
       return binding
     } catch (e) {
@@ -196,10 +196,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-darwin-x64')
-        const bindingPackageVersion = require('@firecrawl/anydoc-darwin-x64/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-darwin-x64')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-darwin-x64/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -212,10 +212,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-darwin-arm64')
-        const bindingPackageVersion = require('@firecrawl/anydoc-darwin-arm64/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-darwin-arm64')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-darwin-arm64/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -232,10 +232,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-freebsd-x64')
-        const bindingPackageVersion = require('@firecrawl/anydoc-freebsd-x64/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-freebsd-x64')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-freebsd-x64/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -248,10 +248,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-freebsd-arm64')
-        const bindingPackageVersion = require('@firecrawl/anydoc-freebsd-arm64/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-freebsd-arm64')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-freebsd-arm64/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -269,10 +269,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@firecrawl/anydoc-linux-x64-musl')
-          const bindingPackageVersion = require('@firecrawl/anydoc-linux-x64-musl/package.json').version
-          if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@steven-zhl/anydoc-linux-x64-musl')
+          const bindingPackageVersion = require('@steven-zhl/anydoc-linux-x64-musl/package.json').version
+          if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -285,10 +285,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@firecrawl/anydoc-linux-x64-gnu')
-          const bindingPackageVersion = require('@firecrawl/anydoc-linux-x64-gnu/package.json').version
-          if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@steven-zhl/anydoc-linux-x64-gnu')
+          const bindingPackageVersion = require('@steven-zhl/anydoc-linux-x64-gnu/package.json').version
+          if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -303,10 +303,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@firecrawl/anydoc-linux-arm64-musl')
-          const bindingPackageVersion = require('@firecrawl/anydoc-linux-arm64-musl/package.json').version
-          if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@steven-zhl/anydoc-linux-arm64-musl')
+          const bindingPackageVersion = require('@steven-zhl/anydoc-linux-arm64-musl/package.json').version
+          if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -319,10 +319,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@firecrawl/anydoc-linux-arm64-gnu')
-          const bindingPackageVersion = require('@firecrawl/anydoc-linux-arm64-gnu/package.json').version
-          if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@steven-zhl/anydoc-linux-arm64-gnu')
+          const bindingPackageVersion = require('@steven-zhl/anydoc-linux-arm64-gnu/package.json').version
+          if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -337,10 +337,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@firecrawl/anydoc-linux-arm-musleabihf')
-          const bindingPackageVersion = require('@firecrawl/anydoc-linux-arm-musleabihf/package.json').version
-          if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@steven-zhl/anydoc-linux-arm-musleabihf')
+          const bindingPackageVersion = require('@steven-zhl/anydoc-linux-arm-musleabihf/package.json').version
+          if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -353,10 +353,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@firecrawl/anydoc-linux-arm-gnueabihf')
-          const bindingPackageVersion = require('@firecrawl/anydoc-linux-arm-gnueabihf/package.json').version
-          if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@steven-zhl/anydoc-linux-arm-gnueabihf')
+          const bindingPackageVersion = require('@steven-zhl/anydoc-linux-arm-gnueabihf/package.json').version
+          if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -371,10 +371,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@firecrawl/anydoc-linux-loong64-musl')
-          const bindingPackageVersion = require('@firecrawl/anydoc-linux-loong64-musl/package.json').version
-          if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@steven-zhl/anydoc-linux-loong64-musl')
+          const bindingPackageVersion = require('@steven-zhl/anydoc-linux-loong64-musl/package.json').version
+          if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -387,10 +387,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@firecrawl/anydoc-linux-loong64-gnu')
-          const bindingPackageVersion = require('@firecrawl/anydoc-linux-loong64-gnu/package.json').version
-          if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@steven-zhl/anydoc-linux-loong64-gnu')
+          const bindingPackageVersion = require('@steven-zhl/anydoc-linux-loong64-gnu/package.json').version
+          if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -405,10 +405,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@firecrawl/anydoc-linux-riscv64-musl')
-          const bindingPackageVersion = require('@firecrawl/anydoc-linux-riscv64-musl/package.json').version
-          if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@steven-zhl/anydoc-linux-riscv64-musl')
+          const bindingPackageVersion = require('@steven-zhl/anydoc-linux-riscv64-musl/package.json').version
+          if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -421,10 +421,10 @@ function requireNative() {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@firecrawl/anydoc-linux-riscv64-gnu')
-          const bindingPackageVersion = require('@firecrawl/anydoc-linux-riscv64-gnu/package.json').version
-          if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@steven-zhl/anydoc-linux-riscv64-gnu')
+          const bindingPackageVersion = require('@steven-zhl/anydoc-linux-riscv64-gnu/package.json').version
+          if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -438,10 +438,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-linux-ppc64-gnu')
-        const bindingPackageVersion = require('@firecrawl/anydoc-linux-ppc64-gnu/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-linux-ppc64-gnu')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-linux-ppc64-gnu/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -454,10 +454,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-linux-s390x-gnu')
-        const bindingPackageVersion = require('@firecrawl/anydoc-linux-s390x-gnu/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-linux-s390x-gnu')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-linux-s390x-gnu/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -474,10 +474,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-openharmony-arm64')
-        const bindingPackageVersion = require('@firecrawl/anydoc-openharmony-arm64/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-openharmony-arm64')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-openharmony-arm64/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -490,10 +490,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-openharmony-x64')
-        const bindingPackageVersion = require('@firecrawl/anydoc-openharmony-x64/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-openharmony-x64')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-openharmony-x64/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -506,10 +506,10 @@ function requireNative() {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@firecrawl/anydoc-openharmony-arm')
-        const bindingPackageVersion = require('@firecrawl/anydoc-openharmony-arm/package.json').version
-        if (bindingPackageVersion !== '0.2.4' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@steven-zhl/anydoc-openharmony-arm')
+        const bindingPackageVersion = require('@steven-zhl/anydoc-openharmony-arm/package.json').version
+        if (bindingPackageVersion !== '0.2.5' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -643,16 +643,16 @@ if (!nativeBinding || forceWasi) {
     let candidateError = null
     let candidateFailed = false
     try {
-      candidateError = __napiWasiResolveCandidate('@firecrawl/anydoc-wasm32-wasi', true, undefined)
+      candidateError = __napiWasiResolveCandidate('@steven-zhl/anydoc-wasm32-wasi', true, undefined)
       candidateFailed = candidateError !== null
       if (!candidateFailed) {
         if (process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          const bindingPackageVersion = require('@firecrawl/anydoc-wasm32-wasi/package.json').version
-          if (bindingPackageVersion !== '0.2.4') {
-            throw new Error(`WASI binding package version mismatch, expected 0.2.4 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const bindingPackageVersion = require('@steven-zhl/anydoc-wasm32-wasi/package.json').version
+          if (bindingPackageVersion !== '0.2.5') {
+            throw new Error(`WASI binding package version mismatch, expected 0.2.5 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
         }
-        wasiBinding = require('@firecrawl/anydoc-wasm32-wasi')
+        wasiBinding = require('@steven-zhl/anydoc-wasm32-wasi')
         nativeBinding = wasiBinding
         wasiBindingLoaded = true
       }

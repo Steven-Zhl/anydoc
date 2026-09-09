@@ -1,14 +1,14 @@
-# @firecrawl/anydoc
+# @steven-zhl/anydoc
 
-[![npm](https://img.shields.io/npm/v/@firecrawl/anydoc.svg)](https://www.npmjs.com/package/@firecrawl/anydoc)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/firecrawl/anydoc/blob/main/LICENSE)
+[![npm](https://img.shields.io/npm/v/@steven-zhl/anydoc.svg)](https://www.npmjs.com/package/@steven-zhl/anydoc)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Steven-Zhl/anydoc/blob/main/LICENSE)
 
-Convert Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and PDF files into clean GitHub-Flavored Markdown. Node.js bindings for the [anydoc](https://github.com/firecrawl/anydoc) Rust crate, built by [Firecrawl](https://firecrawl.dev). Also available as a hosted API through [Firecrawl Parse](https://firecrawl.dev/parse), which adds our OCR models for the scanned pages anydoc can't read on its own.
+Convert Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and PDF files into clean GitHub-Flavored Markdown. Node.js bindings for the [anydoc](https://github.com/Steven-Zhl/anydoc) Rust crate, built by [Firecrawl](https://firecrawl.dev). Also available as a hosted API through [Firecrawl Parse](https://firecrawl.dev/parse), which adds their OCR models for the scanned pages anydoc can't read on its own.
 
 Every format parses into one shared document model and renders through a single Markdown serializer, so headings, tables, lists, and footnotes come out the same no matter which format goes in. Conversion runs on the libuv thread pool and never blocks the event loop. TypeScript types ship with the package.
 
 ```bash
-npm install @firecrawl/anydoc
+npm install @steven-zhl/anydoc
 ```
 
 ## Supported formats
@@ -29,10 +29,10 @@ npm install @firecrawl/anydoc
 The package ships an `anydoc` command, so `npx` converts a document with no install:
 
 ```bash
-npx @firecrawl/anydoc report.docx               # Markdown to stdout
-npx @firecrawl/anydoc slides.pptx -o slides.md  # or to a file
-npx @firecrawl/anydoc - --format csv < data.csv # read stdin
-npx @firecrawl/anydoc scan.pdf --ocr hosted     # scanned pages via Firecrawl Parse
+npx @steven-zhl/anydoc report.docx               # Markdown to stdout
+npx @steven-zhl/anydoc slides.pptx -o slides.md  # or to a file
+npx @steven-zhl/anydoc - --format csv < data.csv # read stdin
+npx @steven-zhl/anydoc scan.pdf --ocr hosted     # scanned pages via Firecrawl Parse
 ```
 
 Markdown goes to stdout, errors to stderr, and `anydoc --help` covers the rest.
@@ -40,7 +40,7 @@ Markdown goes to stdout, errors to stderr, and `anydoc --help` covers the rest.
 ## Usage
 
 ```js
-import { toDocument, toMarkdown, toMarkdownBytes } from '@firecrawl/anydoc';
+import { toDocument, toMarkdown, toMarkdownBytes } from '@steven-zhl/anydoc';
 
 // From a file path:
 const markdown = await toMarkdown('report.docx');
