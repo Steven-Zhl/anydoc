@@ -191,10 +191,11 @@ jobs:
           fi
       - name: Publish
         if: github.event_name == 'push' && steps.probe.outputs.published == 'false'
+        # Trusted publishing: no token — npm authenticates via GitHub OIDC
+        # (id-token: write above; trusted publisher configured per npm package).
         run: npm publish --access public
         working-directory: node
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
       - name: Publish (dry run)
         # Skipped when the version is live: npm refuses even a --dry-run
@@ -204,5 +205,3 @@ jobs:
         # would otherwise publish the per-platform packages and cut a GitHub release.
         run: npm publish --dry-run --ignore-scripts --access public
         working-directory: node
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
