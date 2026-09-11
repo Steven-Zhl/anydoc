@@ -156,6 +156,50 @@ jobs:
           docker run --rm -v ${{ github.workspace }}:/build -w /build/node
           ${{ matrix.image }} npm test
 
+  build-cli:
+    name: Build CLI (${{ matrix.target }})
+    needs: gate
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: aarch64-apple-darwin
+            host: macos-latest
+          - target: x86_64-apple-darwin
+            host: macos-latest
+          - target: x86_64-pc-windows-msvc
+            host: windows-latest
+    runs-on: ${{ matrix.host }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: cli-${{ matrix.target }}
+      # The Windows build picks up the static-CRT rustflags from
+      # .cargo/config.toml, so the binary runs without the VC++ redistributable.
+      - run: cargo build --release --locked --bin anydoc --target ${{ matrix.target }}
+      - name: Package (macOS)
+        if: runner.os == 'macOS'
+        run: >
+          tar -czf anydoc-${{ needs.gate.outputs.version }}-${{ matrix.target }}.tar.gz
+          -C target/${{ matrix.target }}/release anydoc
+      - name: Package (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: >
+          Compress-Archive -Path target/${{ matrix.target }}/release/anydoc.exe
+          -DestinationPath anydoc-${{ needs.gate.outputs.version }}-${{ matrix.target }}.zip
+      - uses: actions/upload-artifact@v7
+        with:
+          name: cli-${{ matrix.target }}
+          path: |
+            anydoc-*.tar.gz
+            anydoc-*.zip
+          if-no-files-found: error
+
   publish-npm:
     name: Publish npm
     needs: [gate, test-node]
@@ -205,3 +249,38 @@ jobs:
         # would otherwise publish the per-platform packages and cut a GitHub release.
         run: npm publish --dry-run --ignore-scripts --access public
         working-directory: node
+
+  # The release page appears last: only once the npm publish has succeeded, so
+  # a release never points at a version that is not actually on the registry.
+  github-release:
+    name: GitHub release
+    needs: [gate, publish-npm, build-cli]
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: cli-*
+          path: assets
+          merge-multiple: true
+      - name: Create release and upload CLI binaries
+        env:
+          GH_TOKEN: ${{ github.token }}
+        # Notes come from .github/releases/<tag>.md; a release without one gets
+        # generated notes. --clobber keeps a re-run green when some assets
+        # already uploaded.
+        run: |
+          if ! gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            notes=".github/releases/$GITHUB_REF_NAME.md"
+            if [ -f "$notes" ]; then
+              gh release create "$GITHUB_REF_NAME" --verify-tag \
+                --title "$(head -n 1 "$notes" | sed 's/^# //')" \
+                --notes-file <(tail -n +2 "$notes")
+            else
+              gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes
+            fi
+          fi
+          gh release upload "$GITHUB_REF_NAME" assets/* --clobber
